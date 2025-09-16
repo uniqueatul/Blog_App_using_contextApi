@@ -65,17 +65,22 @@
 import { createContext, useState } from "react";
 import { baseUrl } from "../baseUrl";
 
-// Step 1: Create Context (the "box")
+
 export const AppContext = createContext();
 
-// Step 2: Create Provider
+
+
 export function AppcontextProvider({ children }) {
   const [loading, setloading] = useState(false);
   const [posts, setposts] = useState([]);
   const [page, setpage] = useState(1);
   const [totalpages, settotalpages] = useState(null);
 
-  // Fetch posts from API
+
+  
+
+
+
   async function fetchBlogPost(page = 1) {
     setloading(true);
     let url = `${baseUrl}?page=${page}`;
